@@ -1,0 +1,271 @@
+=== SLIDE s/ ===
+ArchiTech
+IA
+PROPUESTA COMERCIAL
+Asistente Inteligente
+de Agendamiento
+por WhatsApp
+PREPARADA PARA
+Ortega & Abogados
+Mayo 2026
+Versión 1.0  ·  Confidencial
+=== SLIDE s/ ===
+01  ·  EL RETO
+03 / 10
+CUATRO SITUACIONES
+QUE CUESTAN CLIENTES
+CADA SEMANA
+Se han identificado problemáticas recurrentes en los despachos jurídicos en Colombia que impactan directamente los ingresos y la reputación de las firmas.
+01
+Llamadas y mensajes sin responder a tiempo
+Fuera del horario, en audiencia o cuando el equipo está saturado, el cliente queda sin respuesta y busca otra firma.
+02
+Carga operativa sobre el equipo administrativo
+Recepcionistas y asistentes invierten horas tomando datos básicos y agendando citas — tiempo de mayor valor desperdiciado.
+03
+Casos sin clasificación previa
+El abogado llega a la primera reunión sin saber si la consulta es civil, laboral, penal o tributaria. Reuniones poco productivas.
+04
+Imagen poco diferenciada en el mercado
+Las firmas que adoptan herramientas digitales transmiten innovación y profesionalismo. Las que no, lucen tradicionales.
+Architech
+IA
+=== SLIDE s/ ===
+02  ·  NUESTRA SOLUCIÓN
+04 / 10
+Un asistente jurídico que
+atiende, entiende y agenda
+Vive dentro de
+WhatsApp
+— el canal donde sus clientes ya están.
+Sin descargas, sin formularios, sin esperas. El cliente escribe como lo haría con cualquier persona, y el asistente responde con calidez, claridad y
+profesionalismo
+.
+Disponible
+24 horas, 7 días a la semana
+, incluso los domingos y en plena audiencia.
+¿QUÉ HACE EXACTAMENTE?
+✓
+Saluda al cliente y le pide que describa su caso.
+✓
+Identifica el área del derecho del caso.
+✓
+Recoge nombre, contacto y ciudad sin formulario.
+✓
+Ofrece horarios y agenda en el calendario del abogado.
+✓
+Envía confirmación por correo con Google Meet.
+✓
+Notifica al abogado responsable y registra el caso.
+=== SLIDE s/ ===
+03  ·  CÓMO FUNCIONA
+05 / 10
+EL CLIENTE AGENDA EN
+MENOS DE 90 SEGUNDOS
+Hemos optimizado el flujo conversacional para que el cliente agende su cita en máximo cuatro mensajes. Sin laberintos. Sin frustración. Sin perder el tono humano y cercano que su firma representa.
+1
+Escribe a su WhatsApp
+El asistente saluda en nombre de Ortega & Abogados y pide al cliente describir su situación. Si envía audio, lo transcribe.
+2
+Identifica caso, datos y horarios
+Clasifica el área legal, detecta urgencia (audiencias, embargos), pide datos esenciales y muestra horarios disponibles.
+3
+Confirma y crea la cita
+Crea el evento en Google Calendar del abogado correspondiente, genera el enlace de Google Meet y deja todo listo.
+4
+Confirma y notifica
+El cliente recibe correo con datos del abogado y enlace de la reunión. El abogado recibe notificación con resumen del caso.
+Tiempo promedio del cliente para agendar:
+menos de 90
+minutos
+.
+Architech
+IA
+05
+=== SLIDE s/ ===
+04  ·  ÁREAS Y PRIORIDAD
+06 / 10
+Entrenado con vocabulario jurídico colombiano.
+Reconoce
+el
+área del derecho de cada consulta y detecta la urgencia sin necesidad de preguntar.
+ÁREAS QUE CLASIFICA
+Civil
+Familia
+Laboral
+Comercial
+Tributario
+Penal
+Administrativo
+Internacional
+Inmobiliario
+Ambiental
+Propiedad Intelectual
+Litigios
+Protección de Datos
+Consultoría
++ personalizables
+=== SLIDE s/ ===
+05  ·  BENEFICIOS
+07 / 10
+LO QUE SU FIRMA
+GANA DESDE EL DÍA UNO
+⏱
+Atención 24/7 sin más personal
+El asistente nunca duerme. Responde a las 11 PM, los domingos y en plena audiencia.
+✓
+Cero citas perdidas
+Cada conversación queda registrada y agendada. Si requiere humano, se escala automáticamente.
+⚖
+Casos pre-clasificados
+Antes de la primera reunión, el abogado ya sabe el área, los datos y la urgencia.
+!
+Detección de urgencias
+Casos críticos como audiencias o embargos se marcan y notifican de inmediato.
+✉
+Confirmación profesional
+El cliente recibe correo formal con datos de la cita y enlace de Google Meet.
+★
+Imagen de modernidad
+Su firma se posiciona como pionera en aplicar IA al servicio jurídico en Colombia.
+Architech
+IA
+07
+=== SLIDE s/ ===
+06  ·  INVERSIÓN
+08 / 10
+TRES PLANES
+PARA CADA MOMENTO
+DE SU FIRMA
+ESENCIAL
+Para firmas que dan el primer paso
+$
+1.800.000
+COP + IVA / mes
+✓
+Asistente IA en WhatsApp
+✓
+Agendamiento Google Calendar
+✓
+Confirmación por correo
+✓
+Hasta 15 áreas legales
+✓
+Transcripción
+de
+notas
+de
+voz
+—
+Detección de urgencia
+—
+Notificación al abogado
+—
+Transcripción de voz
+—
+Canal Telegram
+—
+Reportes y dashboard
+✓
+Soporte por correo (8x5)
+★ RECOMENDADO ★
+PROFESIONAL
+Para firmas que ya operan a pleno ritmo
+$
+2.250.000
+COP + IVA / mes
+✓
+Asistente IA en WhatsApp
+✓
+Agendamiento Google Calendar
+✓
+Confirmación por correo
+✓
+15 áreas
+legales
+completes
+gestionadas
+✓
+Detección urgencia (Alta/Media/Baja)
+✓
+Notificación correo + Telegram
+✓
+Transcripción de notas de voz
+✓
+Canal Telegram incluido
+✓
+Dashboard de gestión
+✓
+Soporte preferente
+PREMIUM
+Para
+firmas que buscan máxima eficiencia
+$
+2.500.000
+COP + IVA / mes
+✓
+Todo lo del Plan Profesional
+✓
+Gestión
+y
+seguimiento
+a
+citas
+✓
+14 áreas + personalización
+✓
+Reglas de urgencia personalizadas
+✓
+Reprogramación automática
+✓
+Recordatorios 24h antes
+✓
+Escalamiento inteligente
+✓
+WhatsApp + Telegram + API
+✓
+Informes
+estrátegicos
+mensuales
+✓
+Soporte 24/7 + gerente cuenta
+Implementación, configuración y capacitación:
+incluidas en todos los planes.
+·
+Pago total anticipado:
+5% de descuento.
+08
+=== SLIDE s/ ===
+07  ·  PRÓXIMOS PASOS
+09 / 10
+OPERANDO EN SU WHATSAPP EN
+7 A 10 DÍAS
+1
+SESIÓN DE DESCUBRIMIENTO
+60 minutos
+Conocemos áreas, abogados, horarios, tono de voz y políticas. Sin compromiso.
+2
+PERSONALIZACIÓN
+3 a 5 días
+Configuramos áreas, calendarios, plantillas de correo y conectamos su WhatsApp.
+3
+CAPACITACIÓN AL EQUIPO
+2 horas
+Formamos a sus asistentes y abogados sobre notificaciones, intervención y dashboard.
+4
+LANZAMIENTO
+30 días iniciales
+En vivo. Monitoreamos cada conversación y refinamos la clasificación.
+Tiempo total hasta el primer cliente agendado:
+entre 7 y 10 días.
+=== SLIDE s/ ===
+INTELIGENCIA QUE CONSTRUYE EL FUTURO
+Convirtamos cada mensaje
+en una oportunidad.
+CORREO
+comercial@architechia.co
+WEB
+www.architechia.co
+WHATSAPP
++57 320 928 6950
+Esta propuesta es válida por 30 días desde su fecha de emisión.

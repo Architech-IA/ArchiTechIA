@@ -1,0 +1,17 @@
+# Presentaciones y documentos sensibles
+*.pptx
+*.ppt
+*.key
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+*.swp
+*.swo
+
+# Dependencias (por si se agregan en el futuro)
+node_modules/
