@@ -178,6 +178,19 @@
     }
     .nav-cta:hover { background: var(--orange-light) !important; transform: translateY(-1px); box-shadow: 0 8px 24px var(--orange-glow); }
     .nav-cta::after { display: none !important; }
+    .nav-portal {
+      background: transparent !important;
+      color: var(--white-muted) !important;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 500 !important;
+      font-size: 13px !important;
+      border: 1px solid var(--black-border);
+      transition: var(--transition) !important;
+      white-space: nowrap;
+    }
+    .nav-portal:hover { color: var(--white) !important; border-color: var(--white-muted) !important; }
+    .nav-portal::after { display: none !important; }
 
     .nav-hamburger {
       display: none;
@@ -1066,6 +1079,7 @@
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#por-que">Nosotros</a></li>
         <li><a href="#contacto" class="nav-cta">Hablar con un experto</a></li>
+        <li><a href="https://architechia-portal.vercel.app/" class="nav-portal" target="_blank" rel="noopener noreferrer">Portal</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -1504,6 +1518,7 @@
         <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
         <a href="mailto:support.architechia@gmail.com">support.architechia@gmail.com</a>
+        <a href="https://architechia-portal.vercel.app/" target="_blank" rel="noopener noreferrer">Portal</a>
       </nav>
       <p class="footer-copy">© 2025 ArchiTechIA. Todos los derechos reservados.</p>
     </div>
