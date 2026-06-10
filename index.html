@@ -79,6 +79,15 @@
     }
 
     /* ============================================================
+       FOCUS VISIBLE
+    ============================================================ */
+    :focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ============================================================
        SCROLLBAR
     ============================================================ */
     ::-webkit-scrollbar { width: 6px; }
@@ -432,7 +441,7 @@
       pointer-events: none;
       transition: var(--transition);
     }
-    .service-card:hover .card-glow { opacity: 1.5; }
+    .service-card:hover .card-glow { filter: brightness(2.5); }
 
     .service-icon {
       width: 56px;
@@ -1121,21 +1130,21 @@
 
         <div class="hero-trust fade-up delay-4">
           <div class="trust-item">
-            <div class="trust-icon">🤖</div>
+            <div class="trust-icon" aria-hidden="true">🤖</div>
             <div class="trust-text">
               <strong>IA Avanzada</strong>
               <span>Tecnología de punta</span>
             </div>
           </div>
           <div class="trust-item">
-            <div class="trust-icon">⏱️</div>
+            <div class="trust-icon" aria-hidden="true">⏱️</div>
             <div class="trust-text">
               <strong>Resultados rápidos</strong>
               <span>En semanas, no meses</span>
             </div>
           </div>
           <div class="trust-item">
-            <div class="trust-icon">🌎</div>
+            <div class="trust-icon" aria-hidden="true">🌎</div>
             <div class="trust-text">
               <strong>100% Remoto</strong>
               <span>Colombia y Latam</span>
@@ -1178,7 +1187,7 @@
         <!-- Service 1: AI Automation -->
         <div class="service-card fade-up">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon">🤖</div>
+          <div class="service-icon" aria-hidden="true">🤖</div>
           <h3>Automatización con <span class="orange">Inteligencia Artificial</span></h3>
           <p class="service-desc">
             Implementamos agentes de IA que realizan tareas repetitivas por ti: atienden clientes,
@@ -1197,7 +1206,7 @@
         <!-- Service 2: Web Design -->
         <div class="service-card fade-up delay-2">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon">🌐</div>
+          <div class="service-icon" aria-hidden="true">🌐</div>
           <h3>Diseño Web que <span class="orange">convierte</span></h3>
           <p class="service-desc">
             Creamos tu presencia digital desde cero: desde una landing page de alto impacto
@@ -1229,32 +1238,32 @@
 
       <div class="cases-grid">
         <div class="case-card fade-up">
-          <span class="case-icon">⚖️</span>
+          <span class="case-icon" aria-hidden="true">⚖️</span>
           <h4>Firmas de abogados</h4>
           <p>Asistentes legales que responden consultas frecuentes, gestionan citas y hacen seguimiento de casos.</p>
         </div>
         <div class="case-card fade-up delay-1">
-          <span class="case-icon">🏥</span>
+          <span class="case-icon" aria-hidden="true">🏥</span>
           <h4>Clínicas y salud</h4>
           <p>Bots de agendamiento de citas, recordatorios automáticos y atención al paciente 24/7.</p>
         </div>
         <div class="case-card fade-up delay-2">
-          <span class="case-icon">🛒</span>
+          <span class="case-icon" aria-hidden="true">🛒</span>
           <h4>E-commerce y ventas</h4>
           <p>Atención de pedidos, seguimiento de envíos y respuestas a preguntas de productos sin intervención humana.</p>
         </div>
         <div class="case-card fade-up delay-3">
-          <span class="case-icon">🏢</span>
+          <span class="case-icon" aria-hidden="true">🏢</span>
           <h4>Empresas B2B</h4>
           <p>Calificación automática de leads, seguimiento de propuestas y gestión de relaciones con clientes.</p>
         </div>
         <div class="case-card fade-up delay-4">
-          <span class="case-icon">🏦</span>
+          <span class="case-icon" aria-hidden="true">🏦</span>
           <h4>Finanzas y contabilidad</h4>
           <p>Procesamiento de facturas, generación de reportes y alertas de cumplimiento automatizadas.</p>
         </div>
         <div class="case-card fade-up delay-5">
-          <span class="case-icon">🎓</span>
+          <span class="case-icon" aria-hidden="true">🎓</span>
           <h4>Educación y consultoría</h4>
           <p>Asistentes de aprendizaje, soporte a estudiantes y gestión administrativa automatizada.</p>
         </div>
@@ -1323,28 +1332,28 @@
 
           <ul class="benefit-list">
             <li class="benefit-item fade-up">
-              <div class="benefit-dot">🎯</div>
+              <div class="benefit-dot" aria-hidden="true">🎯</div>
               <div>
                 <h4>Soluciones a tu medida</h4>
                 <p>No hay dos negocios iguales. Cada implementación es diseñada específicamente para tus procesos y objetivos.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-1">
-              <div class="benefit-dot">⚡</div>
+              <div class="benefit-dot" aria-hidden="true">⚡</div>
               <div>
                 <h4>Implementación rápida</h4>
                 <p>Nuestro enfoque ágil te permite ver resultados en semanas. Menos burocracia, más ejecución.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-2">
-              <div class="benefit-dot">🔒</div>
+              <div class="benefit-dot" aria-hidden="true">🔒</div>
               <div>
                 <h4>Acompañamiento continuo</h4>
                 <p>No desaparecemos después de la entrega. Somos tu aliado tecnológico a largo plazo.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-3">
-              <div class="benefit-dot">🌎</div>
+              <div class="benefit-dot" aria-hidden="true">🌎</div>
               <div>
                 <h4>100% remoto, sin fronteras</h4>
                 <p>Atendemos desde Colombia cualquier empresa de Latinoamérica con la misma calidad y dedicación.</p>
@@ -1406,21 +1415,21 @@
           </p>
           <div class="contact-details">
             <div class="contact-detail">
-              <div class="contact-icon">📧</div>
+              <div class="contact-icon" aria-hidden="true">📧</div>
               <div class="contact-detail-text">
                 <strong>Correo electrónico</strong>
                 <span>support.architechia@gmail.com</span>
               </div>
             </div>
             <div class="contact-detail">
-              <div class="contact-icon">📱</div>
+              <div class="contact-icon" aria-hidden="true">📱</div>
               <div class="contact-detail-text">
                 <strong>WhatsApp &amp; Teléfono</strong>
                 <span>+57 316 991 1820</span>
               </div>
             </div>
             <div class="contact-detail">
-              <div class="contact-icon">🌎</div>
+              <div class="contact-icon" aria-hidden="true">🌎</div>
               <div class="contact-detail-text">
                 <strong>Modalidad</strong>
                 <span>100% remoto · Colombia y Latam</span>
