@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArchiTechIA Landing</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una sola columna editorial; el hero lleva un campo de puntos que muestra donde la IA ya impacta (naranja) y donde aun no (apagado). */
+:root{
+  --bg:#0d0f13; --bg2:#14171d; --line:#262a33; --fg:#eceef2; --mute:#9aa1ad;
+  --accent:#ff7a1a; --accent-ink:#1a0d00; --dot:#2a2f3a;
+  --f-display:'Bricolage Grotesque','Segoe UI',sans-serif;
+  --f-body:'Instrument Sans','Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){--bg:#f2f4f7;--bg2:#e8ebf0;--line:#d3d8e0;--fg:#13161b;--mute:#566070;--accent:#d4500a;--accent-ink:#fff;--dot:#c6ccd6;color-scheme:light}
+}
+:root[data-theme="light"]{--bg:#f2f4f7;--bg2:#e8ebf0;--line:#d3d8e0;--fg:#13161b;--mute:#566070;--accent:#d4500a;--accent-ink:#fff;--dot:#c6ccd6;color-scheme:light}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.note{background:var(--accent);color:var(--accent-ink);font-family:var(--f-mono);font-size:.78rem;text-align:center;padding:8px 16px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{font-family:var(--f-display);font-weight:800;font-size:1.3rem}
+.logo b{color:var(--accent)}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-size:.95rem;color:var(--mute)}
+nav ul a{text-decoration:none}
+nav ul a:hover{color:var(--fg)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none;padding:14px 22px;border-radius:4px;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:64px 80px}
+.hero p.sub{font-size:1.25rem;color:var(--mute);margin-top:24px;max-width:34ch}
+.hero .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.field{position:relative;aspect-ratio:1;max-width:100%;border:1px solid var(--line);border-radius:6px;background:var(--bg2);overflow:hidden}
+.field canvas{width:100%;height:100%;display:block}
+.field figcaption{position:absolute;left:12px;bottom:10px;right:12px;font-family:var(--f-mono);font-size:.7rem;color:var(--mute);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.field figcaption i{font-style:normal;color:var(--accent)}
+section{padding-block:72px;border-top:1px solid var(--line)}
+.head{display:grid;gap:14px;margin-bottom:40px;max-width:60ch}
+.head p{color:var(--mute)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.pillar{padding:28px;display:grid;gap:14px;align-content:start;min-width:0}
+.pillar+.pillar{border-left:1px solid var(--line)}
+.pillar ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:var(--mute);font-size:.97rem}
+.pillar li::before{content:"\2192";color:var(--accent);margin-right:10px;font-family:var(--f-mono)}
+.physical{margin-top:20px;border:1px dashed var(--accent);padding:24px 28px;display:grid;grid-template-columns:auto 1fr;gap:8px 24px;align-items:center}
+.tag{font-family:var(--f-mono);font-size:.72rem;background:var(--accent);color:var(--accent-ink);padding:4px 8px;border-radius:3px;letter-spacing:.08em;text-transform:uppercase;justify-self:start}
+.physical p{color:var(--mute)}
+.physical .chips{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.78rem}
+.physical .chips span{border:1px solid var(--line);padding:4px 10px;border-radius:99px;color:var(--fg)}
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.method div{border-top:2px solid var(--accent);padding-top:16px;display:grid;gap:8px;min-width:0}
+.method p{color:var(--mute);font-size:.95rem}
+.entries{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.entry{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;border:1px solid var(--line);text-decoration:none;background:var(--bg2);min-width:0}
+.entry span:first-child{font-family:var(--f-display);font-size:1.2rem;font-weight:600}
+.entry small{display:block;color:var(--mute);font-size:.88rem;margin-top:2px;font-family:var(--f-body);font-weight:400}
+.entry .go{color:var(--accent);font-family:var(--f-mono)}
+.entry:hover{border-color:var(--accent)}
+.diag{background:var(--bg2);border:1px solid var(--line);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.axes{display:grid;gap:10px}
+.axis{display:grid;grid-template-columns:140px 1fr 2.2rem;gap:12px;align-items:center;font-size:.9rem;font-family:var(--f-mono)}
+.bar{height:6px;background:var(--dot);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.axes small{color:var(--mute);font-size:.72rem;margin-top:4px}
+.sectors{display:flex;flex-wrap:wrap;gap:10px}
+.sectors span{border:1px solid var(--line);padding:8px 16px;border-radius:99px;font-size:.95rem}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.slot{border:1px dashed var(--line);padding:24px;min-height:160px;display:grid;align-content:space-between;gap:12px;color:var(--mute);font-size:.92rem}
+.slot b{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact dl{margin:24px 0 0;display:grid;gap:14px}
+.contact dt{font-family:var(--f-mono);font-size:.72rem;color:var(--mute);text-transform:uppercase;letter-spacing:.1em}
+.contact dd{margin:0;user-select:all}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:.88rem;color:var(--mute)}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:12px;width:100%}
+.sent{display:none;color:var(--accent);font-family:var(--f-mono);font-size:.85rem}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--mute);font-size:.88rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  .hero,.diag,.contact{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .pillar+.pillar{border-left:0;border-top:1px solid var(--line)}
+  .method{grid-template-columns:repeat(2,1fr)}
+  .entries,.proof{grid-template-columns:1fr}
+  .physical{grid-template-columns:1fr}
+  .diag{padding:24px}
+  .axis{grid-template-columns:110px 1fr 2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="note">MOCKUP de propuesta. No es el sitio publicado. Textos y casos marcados como pendientes.</div>
+
+<header class="wrap">
+  <nav>
+    <div class="logo">ArchiTech<b>IA</b></div>
+    <ul>
+      <li><a href="#pilares">Servicios</a></li>
+      <li><a href="#metodo">Método</a></li>
+      <li><a href="#entrada">Por dónde empezar</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="https://architechia-portal.vercel.app/">Portal</a></li>
+    </ul>
+    <a class="btn" href="#diagnostico">Diagnóstico de madurez en IA</a>
+  </nav>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <p class="eyebrow">Arquitectos de soluciones de IA · Colombia y Latam</p>
+    <h1 style="margin-top:18px">Llevamos la IA donde todavía no llega.</h1>
+    <p class="sub">Democratizamos la IA: diagnosticamos, diseñamos e implementamos soluciones que su organización realmente adopta.</p>
+    <div class="cta">
+      <a class="btn" href="#diagnostico">Medir mi madurez en IA</a>
+      <a class="btn ghost" href="#entrada">Contar mi problema</a>
+    </div>
+  </div>
+  <figure class="field" style="margin:0">
+    <canvas id="field" aria-label="Campo de puntos: algunos encendidos donde la IA ya impacta, la mayoría apagados donde todavía no"></canvas>
+    <figcaption><span><i>●</i> donde la IA ya impacta</span><span>○ donde todavía no</span></figcaption>
+  </figure>
+</div>
+
+<section id="pilares"><div class="wrap">
+  <div class="head"><p class="eyebrow">Qué hacemos</p><h2>Tres frentes para una misma meta: que la IA se use.</h2></div>
+  <div class="pillars">
+    <div class="pillar"><h3>Estrategia</h3><p style="color:var(--mute)">Antes de construir, entendemos la organización.</p>
+      <ul><li>Consultoría de transformación y adopción</li><li>Diagnóstico de madurez en IA</li><li>Gobernanza de datos</li></ul></div>
+    <div class="pillar"><h3>Construcción</h3><p style="color:var(--mute)">Soluciones a la medida, de la integración al multiagente.</p>
+      <ul><li>Desarrollo web a la medida</li><li>Integraciones y automatizaciones</li><li>Sistemas multiagente</li></ul></div>
+    <div class="pillar"><h3>Optimización</h3><p style="color:var(--mute)">Que lo que ya usan rinda más y cueste menos.</p>
+      <ul><li>Optimización de costo de tokens</li><li>Auditoría de soluciones de IA existentes</li></ul></div>
+  </div>
+  <div class="physical">
+    <span class="tag">Nuevo</span>
+    <p><strong style="color:var(--fg)">IA en el mundo físico.</strong> Para los casos donde la IA tiene que salir de la pantalla y trabajar junto a la operación.</p>
+    <div class="chips"><span>Sensores</span><span>ESP32</span><span>Minipc</span><span>Miniservidores</span><span>Cámaras</span></div>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <div class="head"><p class="eyebrow">Cómo trabajamos</p><h2>Adoptada desde el primer día, no instalada y olvidada.</h2><p>El método es el mismo para una firma de abogados que para una planta de producción.</p></div>
+  <div class="method">
+    <div><h3>Diagnosticar</h3><p>Dónde está la organización hoy: procesos, datos, equipo, riesgos.</p></div>
+    <div><h3>Arquitecturar</h3><p>Diseñamos la solución y la ruta, con presupuesto y prioridades claras.</p></div>
+    <div><h3>Implementar</h3><p>Construimos e integramos en semanas, con mínima fricción para el equipo.</p></div>
+    <div><h3>Adoptar</h3><p>Capacitamos, medimos uso real y ajustamos hasta que se vuelva rutina.</p></div>
+  </div>
+</div></section>
+
+<section id="entrada"><div class="wrap">
+  <div class="head"><p class="eyebrow">Por dónde empezar</p><h2>Empiece por su problema. Nosotros ponemos el nombre técnico.</h2></div>
+  <div class="entries">
+    <a class="entry" href="#contacto"><span>Mi equipo pierde horas en tareas repetitivas<small>Automatización e integraciones</small></span><span class="go">→</span></a>
+    <a class="entry" href="#diagnostico"><span>No sé por dónde empezar con la IA<small>Diagnóstico y estrategia</small></span><span class="go">→</span></a>
+    <a class="entry" href="#contacto"><span>Mi factura de IA se disparó<small>Optimización de tokens y auditoría</small></span><span class="go">→</span></a>
+    <a class="entry" href="#contacto"><span>Quiero IA en mi planta, local o bodega<small>IA física: sensores, cámaras, borde</small></span><span class="go">→</span></a>
+  </div>
+</div></section>
+
+<section id="diagnostico"><div class="wrap">
+  <div class="diag">
+    <div>
+      <p class="eyebrow">Puerta de entrada</p>
+      <h2 style="margin:14px 0">Diagnóstico de madurez en IA</h2>
+      <p style="color:var(--mute)">Cinco minutos de preguntas y un informe con su punto de partida y las tres primeras acciones recomendadas.</p>
+      <p style="margin-top:22px"><a class="btn" href="#contacto">Empezar el diagnóstico</a></p>
+    </div>
+    <div class="axes" aria-label="Ejemplo ilustrativo del informe">
+      <div class="axis"><span>Estrategia</span><div class="bar"><i style="width:55%"></i></div><span>55</span></div>
+      <div class="axis"><span>Datos</span><div class="bar"><i style="width:30%"></i></div><span>30</span></div>
+      <div class="axis"><span>Procesos</span><div class="bar"><i style="width:70%"></i></div><span>70</span></div>
+      <div class="axis"><span>Equipo</span><div class="bar"><i style="width:45%"></i></div><span>45</span></div>
+      <div class="axis"><span>Costos de IA</span><div class="bar"><i style="width:20%"></i></div><span>20</span></div>
+      <small>Ejemplo ilustrativo del formato del informe. No son datos de un cliente.</small>
+    </div>
+  </div>
+</div></section>
+
+<section id="casos"><div class="wrap">
+  <div class="head"><p class="eyebrow">Para todo tipo de compañía</p><h2>Sectores donde ya trabajamos o podemos empezar.</h2></div>
+  <div class="sectors"><span>Firmas jurídicas</span><span>Salud</span><span>Comercio y e-commerce</span><span>Empresas B2B</span><span>Finanzas y contabilidad</span><span>Educación y consultoría</span><span>Industria y operación</span></div>
+  <div class="proof" style="margin-top:32px">
+    <div class="slot"><b>Caso 1 · pendiente</b><span>Asistente de agendamiento por WhatsApp. Añadir cliente autorizado, resultado medido y tiempo de implementación.</span></div>
+    <div class="slot"><b>Caso 2 · pendiente</b><span>Sistema multiagente o integración. Añadir problema, solución y métrica real.</span></div>
+    <div class="slot"><b>Caso 3 · pendiente</b><span>IA física, aunque sea un prototipo. Añadir fotos del montaje y qué resolvió.</span></div>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap contact">
+  <div>
+    <p class="eyebrow">Hablemos</p>
+    <h2 style="margin-top:14px">Cuéntenos dónde la IA todavía no está ayudando.</h2>
+    <dl>
+      <div><dt>Correo</dt><dd>support.architechia@gmail.com</dd></div>
+      <div><dt>WhatsApp</dt><dd>+57 320 928 6950</dd></div>
+      <div><dt>Modalidad</dt><dd>100% remoto · Colombia y Latam</dd></div>
+    </dl>
+  </div>
+  <form id="f">
+    <label for="n">Nombre<input id="n" required></label>
+    <label for="e">Empresa<input id="e"></label>
+    <label for="m">Correo<input id="m" type="email" required></label>
+    <label for="t">Qué le interesa
+      <select id="t"><option>Diagnóstico de madurez en IA</option><option>Automatización o integración</option><option>Sistema multiagente</option><option>Optimización de costos de IA</option><option>IA física</option><option>No estoy seguro</option></select></label>
+    <label for="d">Cuéntenos su situación<textarea id="d" rows="3"></textarea></label>
+    <button class="btn" type="submit">Enviar mensaje</button>
+    <p class="sent" id="ok">Es una maqueta: el formulario real se conectará al enviar.</p>
+  </form>
+</div></section>
+</main>
+
+<footer class="wrap"><span>ArchiTechIA · Arquitectos de soluciones de IA</span><span>Política de privacidad y tratamiento de datos (pendiente)</span></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block'});
+(function(){
+  var c=document.getElementById('field'),x=c.getContext('2d');
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  function draw(){
+    var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;
+    c.width=r.width*d;c.height=r.height*d;x.scale(d,d);
+    var n=18,g=r.width/n,dot=css('--dot'),ac=css('--accent');seed=7;
+    var cx=[[4,5],[12,12],[14,4]];
+    for(var i=0;i<n;i++)for(var j=0;j<n;j++){
+      var px=(i+.5)*g,py=(j+.5)*g,lit=0;
+      for(var k=0;k<cx.length;k++){var dd=Math.hypot(i-cx[k][0],j-cx[k][1]);if(dd<3.2&&rnd()>dd/3.6)lit=1}
+      x.beginPath();x.arc(px,py,lit?g*.2:g*.1,0,6.283);x.fillStyle=lit?ac:dot;x.fill();
+    }
+  }
+  draw();window.addEventListener('resize',draw);
+  new MutationObserver(draw).observe(document.documentElement,{attributes:true});
+  if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw)}
+})();
+</script>
+</body>
+</html>
