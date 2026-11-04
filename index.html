@@ -1280,6 +1280,10 @@
       #alcance { padding: 70px 0; }
       .map-card { padding: 20px; }
     }
+      .ico{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+    .trust-icon,.service-icon,.case-icon,.benefit-dot{color:var(--orange)}
+    .trust-icon .ico{width:18px;height:18px}.service-icon .ico{width:26px;height:26px}.case-icon .ico{width:32px;height:32px}.benefit-dot .ico{width:20px;height:20px}
+    .contact-icon{color:#fff}.contact-icon .ico{width:20px;height:20px}
   </style>
 </head>
 <body>
@@ -1355,7 +1359,7 @@
 
         <div class="hero-actions fade-up delay-3">
           <a href="#contacto" class="btn-primary">
-            🚀 Medir mi madurez en IA
+            Medir mi madurez en IA
           </a>
           <a href="#servicios" class="btn-secondary">
             Ver servicios →
@@ -1364,21 +1368,21 @@
 
         <div class="hero-trust fade-up delay-4">
           <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">🤖</div>
+            <div class="trust-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/></svg></div>
             <div class="trust-text">
               <strong>Para todo tipo de empresa</strong>
               <span>Del diagnóstico a la solución</span>
             </div>
           </div>
           <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">⏱️</div>
+            <div class="trust-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 1.5M9.5 3h5"/></svg></div>
             <div class="trust-text">
               <strong>Adopción real</strong>
               <span>Soluciones que el equipo usa</span>
             </div>
           </div>
           <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">🌎</div>
+            <div class="trust-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5z"/></svg></div>
             <div class="trust-text">
               <strong>100% Remoto</strong>
               <span>Colombia y Latam</span>
@@ -1420,7 +1424,7 @@
         <!-- Service 1: Strategy -->
         <div class="service-card fade-up">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">🧭</div>
+          <div class="service-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
           <h3>Estrategia y <span class="orange">adopción</span></h3>
           <p class="service-desc">
             Antes de construir, entendemos tu organización. Acompañamos la transformación digital
@@ -1437,7 +1441,7 @@
         <!-- Service 2: Build -->
         <div class="service-card fade-up delay-2">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">🛠️</div>
+          <div class="service-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 4.9 4.9l-9 9a2.1 2.1 0 0 1-3-3l9-9a4 4 0 0 0-.1-4.4z"/></svg></div>
           <h3>Construcción de <span class="orange">soluciones</span></h3>
           <p class="service-desc">
             Diseñamos e implementamos soluciones a la medida, de una integración puntual
@@ -1454,7 +1458,7 @@
         <!-- Service 3: Optimization -->
         <div class="service-card fade-up">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">📉</div>
+          <div class="service-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7l6 6 4-4 7 7M20.5 11v5h-5"/></svg></div>
           <h3>Optimización de <span class="orange">costos de IA</span></h3>
           <p class="service-desc">
             Que lo que ya usas rinda más y cueste menos. Revisamos cómo consumes IA
@@ -1470,7 +1474,7 @@
         <!-- Service 4: Physical AI -->
         <div class="service-card fade-up delay-2">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">📡</div>
+          <div class="service-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="1.6"/><path d="M8.3 8.3a5.2 5.2 0 0 0 0 7.4M15.7 8.3a5.2 5.2 0 0 1 0 7.4M5.5 5.5a9.2 9.2 0 0 0 0 13M18.5 5.5a9.2 9.2 0 0 1 0 13"/></svg></div>
           <h3>IA en el <span class="orange">mundo físico</span> · Nuevo</h3>
           <p class="service-desc">
             Para los casos donde la IA tiene que salir de la pantalla y trabajar junto a la operación,
@@ -1500,32 +1504,32 @@
 
       <div class="cases-grid">
         <div class="case-card fade-up">
-          <span class="case-icon" aria-hidden="true">⏳</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10M7 20.5h10M8 3.5c0 4 3 5 4 8.5-1 3.500-4 4.5-4 8.500M16 3.5c0 4-3 5-4 8.5 1 3.5 4 4.500 4 8.500"/></svg></span>
           <h4>Mi equipo pierde horas en tareas repetitivas</h4>
           <p>Automatizaciones, asistentes e integraciones que atienden clientes, agendan citas y mueven información entre sistemas.</p>
         </div>
         <div class="case-card fade-up delay-1">
-          <span class="case-icon" aria-hidden="true">🧭</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
           <h4>No sé por dónde empezar con la IA</h4>
           <p>Un diagnóstico de madurez y de gobernanza de datos para saber dónde estás y cuáles son las primeras acciones.</p>
         </div>
         <div class="case-card fade-up delay-2">
-          <span class="case-icon" aria-hidden="true">🧩</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="3.5"/><rect x="4" y="13" width="7" height="7" rx="3.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span>
           <h4>Necesito una solución a la medida</h4>
           <p>Desarrollo web, integraciones y sistemas multiagente diseñados para tus procesos y no para un caso genérico.</p>
         </div>
         <div class="case-card fade-up delay-3">
-          <span class="case-icon" aria-hidden="true">📉</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7l6 6 4-4 7 7M20.5 11v5h-5"/></svg></span>
           <h4>Mi factura de IA se disparó</h4>
           <p>Auditoría de consumo y optimización de costo de tokens para gastar menos con la misma calidad.</p>
         </div>
         <div class="case-card fade-up delay-4">
-          <span class="case-icon" aria-hidden="true">🏭</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5v-9l6 3.500v-3.500l6 3.500V6h5v14.500zM8 17.500h.01M12.500 17.500h.01M17 17.500h.01"/></svg></span>
           <h4>Quiero IA en mi planta, local o bodega</h4>
           <p>Sensores, ESP32, cámaras y miniservidores que llevan la IA al entorno físico de tu operación.</p>
         </div>
         <div class="case-card fade-up delay-5">
-          <span class="case-icon" aria-hidden="true">👥</span>
+          <span class="case-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8.500" r="3.200"/><path d="M3.500 19c.5-3.200 2.800-5 5.500-5s5 1.800 5.500 5M16 5.500a3.200 3.200 0 0 1 0 6M17.500 14.200c1.700.6 2.800 2.100 3 4.800"/></svg></span>
           <h4>Mi equipo no adopta las herramientas</h4>
           <p>Consultoría de adopción y capacitación para que la IA se use desde el primer día.</p>
         </div>
@@ -1592,28 +1596,28 @@
 
           <ul class="benefit-list">
             <li class="benefit-item fade-up">
-              <div class="benefit-dot" aria-hidden="true">🎯</div>
+              <div class="benefit-dot" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="4.500"/><circle cx="12" cy="12" r=".8"/></svg></div>
               <div>
                 <h4>Soluciones a tu medida</h4>
                 <p>No hay dos organizaciones iguales. Cada implementación se diseña para tus procesos y objetivos.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-1">
-              <div class="benefit-dot" aria-hidden="true">⚡</div>
+              <div class="benefit-dot" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3.500L5.500 13.500H12l-1 7 7.500-10H12z"/></svg></div>
               <div>
                 <h4>De la estrategia a la implementación</h4>
                 <p>Un solo equipo que diagnostica, diseña, construye y acompaña. Menos intermediarios, más ejecución.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-2">
-              <div class="benefit-dot" aria-hidden="true">🔒</div>
+              <div class="benefit-dot" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.500" width="14" height="10" rx="2.500"/><path d="M8 10.500V8a4 4 0 0 1 8 0v2.500"/></svg></div>
               <div>
                 <h4>Adopción acompañada</h4>
                 <p>No desaparecemos después de la entrega. Medimos el uso real y ajustamos con tu equipo.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-3">
-              <div class="benefit-dot" aria-hidden="true">🌎</div>
+              <div class="benefit-dot" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5z"/></svg></div>
               <div>
                 <h4>100% remoto, sin fronteras</h4>
                 <p>Atendemos desde Colombia cualquier empresa de Latinoamérica con la misma calidad y dedicación.</p>
@@ -1768,21 +1772,21 @@
           </p>
           <div class="contact-details">
             <div class="contact-detail">
-              <div class="contact-icon" aria-hidden="true">📧</div>
+              <div class="contact-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.500" y="5.500" width="17" height="13" rx="3"/><path d="M4 8l8 5.500L20 8"/></svg></div>
               <div class="contact-detail-text">
                 <strong>Correo electrónico</strong>
                 <span>support.architechia@gmail.com</span>
               </div>
             </div>
             <div class="contact-detail">
-              <div class="contact-icon" aria-hidden="true">📱</div>
+              <div class="contact-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.500"/><path d="M11 17.500h2"/></svg></div>
               <div class="contact-detail-text">
                 <strong>WhatsApp &amp; Teléfono</strong>
                 <span>+57 320 928 6950</span>
               </div>
             </div>
             <div class="contact-detail">
-              <div class="contact-icon" aria-hidden="true">🌎</div>
+              <div class="contact-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5z"/></svg></div>
               <div class="contact-detail-text">
                 <strong>Modalidad</strong>
                 <span>100% remoto · Colombia y Latam</span>
@@ -1815,11 +1819,11 @@
                 <label for="servicio">¿Qué te interesa?</label>
                 <select id="servicio" name="servicio">
                   <option value="" disabled selected>Selecciona un servicio</option>
-                  <option value="diagnostico">🧭 Diagnóstico de madurez en IA</option>
-                  <option value="soluciones">🛠️ Construcción de soluciones (web, integraciones, multiagente)</option>
-                  <option value="costos">📉 Optimización de costos de IA</option>
-                  <option value="fisica">📡 IA en el mundo físico</option>
-                  <option value="otro">💬 No estoy seguro / Quiero asesoría</option>
+                  <option value="diagnostico">Diagnóstico de madurez en IA</option>
+                  <option value="soluciones">Construcción de soluciones (web, integraciones, multiagente)</option>
+                  <option value="costos">Optimización de costos de IA</option>
+                  <option value="fisica">IA en el mundo físico</option>
+                  <option value="otro">No estoy seguro / Quiero asesoría</option>
                 </select>
               </div>
               <div class="form-group">
@@ -1827,8 +1831,7 @@
                 <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu organización y qué problema te gustaría resolver con IA..."></textarea>
               </div>
               <button type="submit" class="btn-form">
-                Enviar mensaje 🚀
-              </button>
+                Enviar mensaje               </button>
             </form>
           </div>
 
@@ -1867,7 +1870,7 @@
 
   <!-- Mobile CTA Bar -->
   <div class="mobile-cta-bar" aria-label="Acciones rápidas">
-    <a href="#contacto" class="btn-primary">🚀 Medir mi madurez en IA</a>
+    <a href="#contacto" class="btn-primary">Medir mi madurez en IA</a>
     <a href="https://wa.me/573209286950?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20IA."
        class="btn-wa"
        target="_blank"
