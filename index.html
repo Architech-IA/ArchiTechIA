@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArchiTechIA — Transformación Digital con Inteligencia Artificial</title>
-  <meta name="description" content="Automatizamos tus procesos con IA y diseñamos tu presencia digital. Asesorías remotas para empresas en Colombia y Latinoamérica." />
+  <title>ArchiTechIA — Arquitectos de soluciones de IA</title>
+  <meta name="description" content="Arquitectos de soluciones de IA. Diagnosticamos, diseñamos e implementamos soluciones que tu organización realmente adopta. Colombia y Latinoamérica." />
 
   <!-- Open Graph / Social -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://architechia.co" />
-  <meta property="og:title"       content="ArchiTechIA — Transformación Digital con Inteligencia Artificial" />
-  <meta property="og:description" content="Automatizamos tus procesos con IA y diseñamos tu presencia digital. Asesorías remotas para empresas en Colombia y Latinoamérica." />
+  <meta property="og:title"       content="ArchiTechIA — Arquitectos de soluciones de IA" />
+  <meta property="og:description" content="Arquitectos de soluciones de IA. Diagnosticamos, diseñamos e implementamos soluciones que tu organización realmente adopta. Colombia y Latinoamérica." />
   <meta property="og:image"       content="https://architechia.co/logo.png" />
   <meta property="og:locale"      content="es_CO" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="ArchiTechIA — Transformación Digital con Inteligencia Artificial" />
-  <meta name="twitter:description" content="Automatizamos tus procesos con IA y diseñamos tu presencia digital." />
+  <meta name="twitter:title"       content="ArchiTechIA — Arquitectos de soluciones de IA" />
+  <meta name="twitter:description" content="Llevamos la IA donde todavía no llega." />
   <meta name="twitter:image"       content="https://architechia.co/logo.png" />
 
   <!-- Google Fonts -->
@@ -1201,6 +1201,85 @@
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
       .stat-number { font-size: 36px; }
     }
+
+    /* ============================================================
+       MAP / ALCANCE
+    ============================================================ */
+    #alcance {
+      padding: 100px 0;
+      position: relative;
+    }
+    .map-card {
+      background: var(--black-card);
+      border: 1px solid var(--black-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .map-card::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(232,71,0,0.14), transparent 70%);
+      pointer-events: none;
+    }
+    .map-svg { width: 100%; height: auto; display: block; position: relative; }
+    .map-svg .c {
+      fill: rgba(232,71,0,0.16);
+      stroke: rgba(232,71,0,0.55);
+      stroke-width: 0.6;
+      stroke-linejoin: round;
+      transition: var(--transition);
+    }
+    .map-svg .c:hover { fill: rgba(232,71,0,0.38); }
+    .map-svg .c.co { fill: var(--orange); stroke: var(--orange-light); filter: drop-shadow(0 0 8px rgba(232,71,0,0.6)); }
+    .map-svg .arc { fill: none; stroke: var(--orange); stroke-width: 1; stroke-dasharray: 3 4; opacity: 0.8; animation: map-flow 2.4s linear infinite; }
+    .map-svg .cd { fill: var(--orange-light); }
+    .map-svg .pulse { fill: none; stroke: var(--orange-light); stroke-width: 1.2; transform-box: fill-box; transform-origin: center; animation: map-ping 2.4s ease-out infinite; }
+    .map-svg .lbl { font-family: var(--font-main); font-size: 11px; font-weight: 700; fill: #fff; paint-order: stroke; stroke: #111; stroke-width: 3px; }
+    @keyframes map-flow { to { stroke-dashoffset: -14; } }
+    @keyframes map-ping { from { opacity: 0.9; transform: scale(0.4); } to { opacity: 0; transform: scale(2.6); } }
+    .map-tip {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(0,0,0,0.85);
+      border: 1px solid rgba(232,71,0,0.4);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .map-legend {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--white-muted);
+      position: relative;
+    }
+    .map-legend span { display: inline-flex; align-items: center; gap: 8px; }
+    .map-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .map-legend .on { background: var(--orange); box-shadow: 0 0 10px var(--orange); }
+    .map-legend .region { background: rgba(232,71,0,0.4); border: 1px solid var(--orange); }
+    @media (prefers-reduced-motion: reduce) {
+      .map-svg .arc, .map-svg .pulse { animation: none; }
+    }
+    @media (max-width: 768px) {
+      #alcance { padding: 70px 0; }
+      .map-card { padding: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -1262,23 +1341,23 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-eyebrow fade-up">
-          <span class="tag">⚡ Automatización con IA · Colombia &amp; Latam</span>
+          <span class="tag">⚡ Arquitectos de soluciones de IA · Colombia &amp; Latam</span>
         </div>
 
         <h1 class="hero-headline fade-up delay-1" id="hero-headline">
-          Tu negocio<br/>
-          <span class="line-accent">trabaja solo.</span><br/>
-          Tú escalas.
+          Llevamos la IA<br/>
+          <span class="line-accent">donde todavía</span><br/>
+          no llega.
         </h1>
 
         <p class="hero-sub fade-up delay-2">
-          Automatizamos los procesos que te quitan tiempo y diseñamos tu presencia digital.
-          Resultados reales, asesorías <strong>100% remotas</strong>.
+          Democratizamos la IA: diagnosticamos, diseñamos e implementamos soluciones
+          que tu organización <strong>realmente adopta</strong>.
         </p>
 
         <div class="hero-actions fade-up delay-3">
           <a href="#contacto" class="btn-primary">
-            🚀 Quiero automatizar mi negocio
+            🚀 Medir mi madurez en IA
           </a>
           <a href="#servicios" class="btn-secondary">
             Ver servicios →
@@ -1289,15 +1368,15 @@
           <div class="trust-item">
             <div class="trust-icon" aria-hidden="true">🤖</div>
             <div class="trust-text">
-              <strong>IA Avanzada</strong>
-              <span>Tecnología de punta</span>
+              <strong>Para todo tipo de empresa</strong>
+              <span>Del diagnóstico a la solución</span>
             </div>
           </div>
           <div class="trust-item">
             <div class="trust-icon" aria-hidden="true">⏱️</div>
             <div class="trust-text">
-              <strong>Resultados rápidos</strong>
-              <span>En semanas, no meses</span>
+              <strong>Adopción real</strong>
+              <span>Soluciones que el equipo usa</span>
             </div>
           </div>
           <div class="trust-item">
@@ -1318,11 +1397,11 @@
   <section id="problema" aria-label="El problema que resolvemos">
     <div class="container">
       <div class="problem-band fade-up">
-        <h2>¿Cuántas horas pierde tu equipo en tareas que se pueden automatizar?</h2>
+        <h2>La IA ya existe. Lo difícil es que llegue a tu operación y se use.</h2>
         <p>
-          Responder mensajes repetitivos, gestionar citas, procesar documentos, actualizar bases de datos…
-          Cada hora desperdiciada en eso es una hora que no estás creciendo.
-          <strong style="color:var(--white);">Nosotros cambiamos eso.</strong>
+          Herramientas sin estrategia, datos sin gobierno, costos que se disparan y equipos que no las adoptan.
+          Hay empresas, procesos y personas a donde la IA todavía no está generando impacto.
+          <strong style="color:var(--white);">Nosotros la llevamos hasta allí.</strong>
         </p>
       </div>
     </div>
@@ -1335,46 +1414,76 @@
     <div class="container">
       <div class="section-header fade-up">
         <span class="tag">💼 Nuestros servicios</span>
-        <h2 id="servicios-title">Todo lo que necesitas para<br/>transformar tu empresa</h2>
-        <p>Desde automatizar tus operaciones hasta construir tu presencia digital, cubrimos los dos frentes.</p>
+        <h2 id="servicios-title">Tres frentes para una misma meta:<br/>que la IA se use</h2>
+        <p>Desde entender tu organización hasta construir y optimizar las soluciones. Y ahora, llevar la IA al mundo físico.</p>
       </div>
 
       <div class="services-grid">
 
-        <!-- Service 1: AI Automation -->
+        <!-- Service 1: Strategy -->
         <div class="service-card fade-up">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">🤖</div>
-          <h3>Automatización con <span class="orange">Inteligencia Artificial</span></h3>
+          <div class="service-icon" aria-hidden="true">🧭</div>
+          <h3>Estrategia y <span class="orange">adopción</span></h3>
           <p class="service-desc">
-            Implementamos agentes de IA que realizan tareas repetitivas por ti: atienden clientes,
-            responden mensajes, procesan documentos y gestionan flujos de trabajo —
-            las 24 horas del día, los 7 días de la semana.
+            Antes de construir, entendemos tu organización. Acompañamos la transformación digital
+            para que la IA se implemente de forma eficiente y sea adoptada desde el inicio.
           </p>
           <ul class="service-features">
-            <li class="service-feature">Bots de atención al cliente por WhatsApp, web o correo</li>
-            <li class="service-feature">Asistentes personales y ejecutivos con IA</li>
-            <li class="service-feature">Automatización de procesos legales y administrativos</li>
-            <li class="service-feature">Integración con tus herramientas actuales (CRM, ERP, etc.)</li>
-            <li class="service-feature">Reportes automáticos y análisis de datos en tiempo real</li>
+            <li class="service-feature">Consultoría de transformación digital con IA</li>
+            <li class="service-feature">Diagnóstico de madurez en IA</li>
+            <li class="service-feature">Diagnóstico de gobernanza de datos</li>
+            <li class="service-feature">Plan de adopción y acompañamiento al equipo</li>
           </ul>
         </div>
 
-        <!-- Service 2: Web Design -->
+        <!-- Service 2: Build -->
         <div class="service-card fade-up delay-2">
           <div class="card-glow" aria-hidden="true"></div>
-          <div class="service-icon" aria-hidden="true">🌐</div>
-          <h3>Diseño Web que <span class="orange">convierte</span></h3>
+          <div class="service-icon" aria-hidden="true">🛠️</div>
+          <h3>Construcción de <span class="orange">soluciones</span></h3>
           <p class="service-desc">
-            Creamos tu presencia digital desde cero: desde una landing page de alto impacto
-            hasta un sitio web completo alineado con tu marca y optimizado para generar clientes.
+            Diseñamos e implementamos soluciones a la medida, de una integración puntual
+            a sistemas de varios agentes trabajando juntos.
           </p>
           <ul class="service-features">
-            <li class="service-feature">Landing pages de alto impacto y alta conversión</li>
-            <li class="service-feature">Sitios web corporativos a medida</li>
-            <li class="service-feature">Diseño visual moderno alineado a tu marca</li>
-            <li class="service-feature">Optimizado para móviles y velocidad de carga</li>
-            <li class="service-feature">Integración con WhatsApp, formularios y analytics</li>
+            <li class="service-feature">Sistemas multiagente</li>
+            <li class="service-feature">Automatizaciones e integraciones con tus herramientas (CRM, ERP, etc.)</li>
+            <li class="service-feature">Asistentes y bots de atención por WhatsApp, web o correo</li>
+            <li class="service-feature">Desarrollo web a la medida</li>
+          </ul>
+        </div>
+
+        <!-- Service 3: Optimization -->
+        <div class="service-card fade-up">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="service-icon" aria-hidden="true">📉</div>
+          <h3>Optimización de <span class="orange">costos de IA</span></h3>
+          <p class="service-desc">
+            Que lo que ya usas rinda más y cueste menos. Revisamos cómo consumes IA
+            y diseñamos formas de reducir el gasto sin perder calidad.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature">Sistemas de optimización de costo de tokens</li>
+            <li class="service-feature">Auditoría de soluciones de IA existentes</li>
+            <li class="service-feature">Reportes y monitoreo de consumo</li>
+          </ul>
+        </div>
+
+        <!-- Service 4: Physical AI -->
+        <div class="service-card fade-up delay-2">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="service-icon" aria-hidden="true">📡</div>
+          <h3>IA en el <span class="orange">mundo físico</span> · Nuevo</h3>
+          <p class="service-desc">
+            Para los casos donde la IA tiene que salir de la pantalla y trabajar junto a la operación,
+            con hardware de bajo costo y procesamiento local.
+          </p>
+          <ul class="service-features">
+            <li class="service-feature">Sensores y microcontroladores (ESP32)</li>
+            <li class="service-feature">Minipc y miniservidores</li>
+            <li class="service-feature">Cámaras y visión por computador</li>
+            <li class="service-feature">IA en el borde, integrada a tus sistemas</li>
           </ul>
         </div>
 
@@ -1388,41 +1497,41 @@
   <section id="casos" aria-labelledby="casos-title">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="tag">🎯 Casos de uso</span>
-        <h2 id="casos-title">¿Qué podemos automatizar?</h2>
-        <p>Si se repite, se puede automatizar. Aquí algunos ejemplos reales.</p>
+        <span class="tag">🎯 Para todo tipo de compañía</span>
+        <h2 id="casos-title">¿Dónde puede ayudar la IA?</h2>
+        <p>Empieza por tu problema. Nosotros ponemos el nombre técnico.</p>
       </div>
 
       <div class="cases-grid">
         <div class="case-card fade-up">
-          <span class="case-icon" aria-hidden="true">⚖️</span>
-          <h4>Firmas de abogados</h4>
-          <p>Asistentes legales que responden consultas frecuentes, gestionan citas y hacen seguimiento de casos.</p>
+          <span class="case-icon" aria-hidden="true">⏳</span>
+          <h4>Mi equipo pierde horas en tareas repetitivas</h4>
+          <p>Automatizaciones, asistentes e integraciones que atienden clientes, agendan citas y mueven información entre sistemas.</p>
         </div>
         <div class="case-card fade-up delay-1">
-          <span class="case-icon" aria-hidden="true">🏥</span>
-          <h4>Clínicas y salud</h4>
-          <p>Bots de agendamiento de citas, recordatorios automáticos y atención al paciente 24/7.</p>
+          <span class="case-icon" aria-hidden="true">🧭</span>
+          <h4>No sé por dónde empezar con la IA</h4>
+          <p>Un diagnóstico de madurez y de gobernanza de datos para saber dónde estás y cuáles son las primeras acciones.</p>
         </div>
         <div class="case-card fade-up delay-2">
-          <span class="case-icon" aria-hidden="true">🛒</span>
-          <h4>E-commerce y ventas</h4>
-          <p>Atención de pedidos, seguimiento de envíos y respuestas a preguntas de productos sin intervención humana.</p>
+          <span class="case-icon" aria-hidden="true">🧩</span>
+          <h4>Necesito una solución a la medida</h4>
+          <p>Desarrollo web, integraciones y sistemas multiagente diseñados para tus procesos y no para un caso genérico.</p>
         </div>
         <div class="case-card fade-up delay-3">
-          <span class="case-icon" aria-hidden="true">🏢</span>
-          <h4>Empresas B2B</h4>
-          <p>Calificación automática de leads, seguimiento de propuestas y gestión de relaciones con clientes.</p>
+          <span class="case-icon" aria-hidden="true">📉</span>
+          <h4>Mi factura de IA se disparó</h4>
+          <p>Auditoría de consumo y optimización de costo de tokens para gastar menos con la misma calidad.</p>
         </div>
         <div class="case-card fade-up delay-4">
-          <span class="case-icon" aria-hidden="true">🏦</span>
-          <h4>Finanzas y contabilidad</h4>
-          <p>Procesamiento de facturas, generación de reportes y alertas de cumplimiento automatizadas.</p>
+          <span class="case-icon" aria-hidden="true">🏭</span>
+          <h4>Quiero IA en mi planta, local o bodega</h4>
+          <p>Sensores, ESP32, cámaras y miniservidores que llevan la IA al entorno físico de tu operación.</p>
         </div>
         <div class="case-card fade-up delay-5">
-          <span class="case-icon" aria-hidden="true">🎓</span>
-          <h4>Educación y consultoría</h4>
-          <p>Asistentes de aprendizaje, soporte a estudiantes y gestión administrativa automatizada.</p>
+          <span class="case-icon" aria-hidden="true">👥</span>
+          <h4>Mi equipo no adopta las herramientas</h4>
+          <p>Consultoría de adopción y capacitación para que la IA se use desde el primer día.</p>
         </div>
       </div>
     </div>
@@ -1435,30 +1544,30 @@
     <div class="container">
       <div class="section-header fade-up">
         <span class="tag">⚙️ Cómo trabajamos</span>
-        <h2 id="proceso-title">Simple, rápido y sin complicaciones</h2>
-        <p>Nuestro proceso está diseñado para que veas resultados en el menor tiempo posible.</p>
+        <h2 id="proceso-title">Adoptada desde el primer día, no instalada y olvidada</h2>
+        <p>El mismo método para una firma de abogados que para una planta de producción.</p>
       </div>
 
       <div class="steps-container">
         <div class="step fade-up">
           <div class="step-number">01</div>
-          <h4>Diagnóstico gratuito</h4>
-          <p>Analizamos tu negocio e identificamos los procesos con mayor potencial de automatización.</p>
+          <h4>Diagnosticar</h4>
+          <p>Analizamos dónde está tu organización hoy: procesos, datos, equipo y riesgos.</p>
         </div>
         <div class="step fade-up delay-1">
           <div class="step-number">02</div>
-          <h4>Diseño de la solución</h4>
-          <p>Creamos una propuesta a medida con tecnología IA adaptada a tus necesidades y presupuesto.</p>
+          <h4>Arquitecturar</h4>
+          <p>Diseñamos la solución y la ruta, con prioridades y presupuesto claros.</p>
         </div>
         <div class="step fade-up delay-2">
           <div class="step-number">03</div>
-          <h4>Implementación ágil</h4>
-          <p>Desarrollamos e integramos la solución en semanas, no meses, con mínima fricción para tu equipo.</p>
+          <h4>Implementar</h4>
+          <p>Construimos e integramos la solución con mínima fricción para tu equipo.</p>
         </div>
         <div class="step fade-up delay-3">
           <div class="step-number">04</div>
-          <h4>Soporte continuo</h4>
-          <p>Monitoreamos, ajustamos y mejoramos continuamente para que el sistema siempre funcione al máximo.</p>
+          <h4>Adoptar</h4>
+          <p>Capacitamos, medimos el uso real y ajustamos hasta que se vuelva rutina.</p>
         </div>
       </div>
     </div>
@@ -1480,11 +1589,11 @@
 
         <div class="benefits-content">
           <span class="tag" style="margin-bottom:16px; display:inline-flex;">🦅 Por qué ArchiTechIA</span>
-          <h2 id="porque-title">Tecnología de punta con el conocimiento del mercado <span class="orange">latinoamericano</span></h2>
+          <h2 id="porque-title">Arquitectos de IA con el conocimiento del mercado <span class="orange">latinoamericano</span></h2>
           <p>
-            Somos un equipo especializado en IA aplicada a negocios reales. Entendemos las necesidades,
-            los tiempos y los presupuestos de las empresas colombianas y latinas.
-            No vendemos software genérico, construimos soluciones a medida.
+            Somos arquitectos de implementación de soluciones de IA. Nuestro valor es democratizar la IA
+            y llevarla a empresas, usuarios y problemas donde todavía no está impactando.
+            No vendemos software genérico: diseñamos soluciones a medida y acompañamos su adopción.
           </p>
 
           <ul class="benefit-list">
@@ -1492,21 +1601,21 @@
               <div class="benefit-dot" aria-hidden="true">🎯</div>
               <div>
                 <h4>Soluciones a tu medida</h4>
-                <p>No hay dos negocios iguales. Cada implementación es diseñada específicamente para tus procesos y objetivos.</p>
+                <p>No hay dos organizaciones iguales. Cada implementación se diseña para tus procesos y objetivos.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-1">
               <div class="benefit-dot" aria-hidden="true">⚡</div>
               <div>
-                <h4>Implementación rápida</h4>
-                <p>Nuestro enfoque ágil te permite ver resultados en semanas. Menos burocracia, más ejecución.</p>
+                <h4>De la estrategia a la implementación</h4>
+                <p>Un solo equipo que diagnostica, diseña, construye y acompaña. Menos intermediarios, más ejecución.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-2">
               <div class="benefit-dot" aria-hidden="true">🔒</div>
               <div>
-                <h4>Acompañamiento continuo</h4>
-                <p>No desaparecemos después de la entrega. Somos tu aliado tecnológico a largo plazo.</p>
+                <h4>Adopción acompañada</h4>
+                <p>No desaparecemos después de la entrega. Medimos el uso real y ajustamos con tu equipo.</p>
               </div>
             </li>
             <li class="benefit-item fade-up delay-3">
@@ -1523,26 +1632,54 @@
   </section>
 
   <!-- =============================================
+       MAP / ALCANCE
+  ============================================= -->
+  <section id="alcance" aria-labelledby="alcance-title">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="tag">🌎 Alcance</span>
+        <h2 id="alcance-title">Desde Colombia, <span class="orange">para toda Latinoamérica</span></h2>
+        <p>100% remoto: acompañamos a empresas de cualquier país de la región con la misma calidad y dedicación.</p>
+      </div>
+
+      <div class="map-card fade-up" id="mapCard">
+        <svg class="map-svg" viewBox="0 0 640 784" role="img" aria-label="Mapa de Latinoamérica con Colombia destacada y conexiones hacia otros países">
+      <path class="c" data-n="Argentina" d="M400.0 773.2L392.8 773.9L388.9 769.2L384.3 768.8L376.1 768.8L376.1 740.0L379.0 745.9L382.9 755.5L392.8 763.3L403.4 766.6L400.0 773.2ZM404.1 439.2L408.6 445.1L411.5 438.5L420.2 438.8L421.4 440.6L435.5 454.1L441.7 455.4L451.0 461.6L458.8 464.8L459.9 468.6L452.4 481.5L460.1 483.8L468.7 485.1L474.7 483.8L481.6 477.2L482.9 469.7L486.6 468.1L490.5 473.0L490.3 479.8L483.9 484.5L478.8 488.0L470.2 496.4L460.0 508.4L458.1 515.4L456.1 524.6L456.1 533.6L454.5 535.7L453.9 541.6L453.4 546.4L463.0 554.3L462.0 560.8L466.8 564.9L466.4 569.5L459.1 581.9L447.8 587.1L432.5 589.1L424.1 588.1L425.7 594.0L424.1 601.4L425.6 606.5L421.0 610.0L413.2 611.4L405.9 607.7L402.9 610.4L404.0 620.5L409.1 623.6L413.3 620.3L415.6 625.7L408.5 628.9L402.4 635.4L401.3 646.1L399.5 651.8L392.3 651.8L386.3 657.4L384.1 665.6L391.6 673.7L398.9 676.0L396.3 686.2L387.3 692.6L382.4 706.3L375.4 711.0L372.3 716.6L374.7 729.3L379.8 736.4L376.6 735.8L369.5 733.9L351.1 732.2L348.0 725.0L348.1 716.0L343.0 716.7L340.4 712.4L339.7 699.9L345.5 694.7L348.0 687.4L347.1 681.7L351.1 672.1L353.9 657.5L353.1 651.1L356.4 649.1L355.6 645.1L352.0 642.9L354.6 638.5L351.1 634.5L349.3 622.5L352.4 620.4L351.1 608.0L352.9 597.8L354.9 589.0L359.5 585.5L357.2 576.0L357.2 567.2L362.9 561.1L362.8 553.2L367.1 544.2L367.1 535.8L365.1 534.1L361.6 518.5L366.3 509.4L365.6 500.9L368.3 493.0L373.3 484.9L378.7 479.6L376.4 476.2L378.0 473.5L377.8 459.4L386.1 455.3L388.7 446.7L387.8 444.6L394.1 437.2L404.1 439.2Z"/><path class="c" data-n="Belice" d="M219.9 128.7L219.8 127.5L220.7 127.2L222.1 128.1L224.8 123.3L226.3 123.2L226.3 124.3L227.8 124.4L227.6 126.5L226.4 130.0L227.1 131.2L226.3 134.1L226.7 134.9L225.9 138.9L224.4 141.0L223.0 141.2L221.5 144.0L219.2 144.0L219.8 135.0L219.9 128.7Z"/><path class="c" data-n="Bolivia" d="M420.2 438.8L411.5 438.5L408.6 445.1L404.1 439.2L394.1 437.2L387.8 444.6L382.3 445.7L379.3 434.4L375.2 425.2L377.6 417.4L373.6 414.0L372.6 408.2L368.8 402.7L373.6 394.1L370.4 387.5L372.1 384.8L370.7 381.9L373.7 378.0L373.9 371.3L374.2 365.8L375.9 363.1L369.3 350.6L375.0 351.3L378.9 351.1L380.6 348.7L387.2 345.6L391.3 342.7L401.2 341.4L400.4 347.2L401.4 350.2L400.7 355.4L409.0 362.3L417.6 363.6L420.5 366.6L425.7 368.1L428.9 370.4L433.6 370.3L438.1 372.6L438.4 377.2L439.9 379.5L440.0 382.9L437.8 383.0L440.7 392.2L455.3 392.5L454.2 397.1L455.0 400.3L459.2 402.5L461.0 407.5L459.6 413.8L457.5 417.4L458.3 422.0L455.9 423.7L455.7 421.2L448.6 417.0L441.6 416.9L428.3 419.3L424.6 426.4L424.4 430.8L421.4 440.6L420.2 438.8Z"/><path class="c" data-n="Brasil" d="M460.0 508.4L470.2 496.4L478.8 488.0L483.9 484.5L490.3 479.8L490.5 473.0L486.6 468.1L482.9 469.7L484.4 464.8L485.4 459.9L485.4 455.3L482.6 453.8L479.8 455.1L476.9 454.7L476.1 451.5L475.3 443.9L473.9 441.5L468.8 439.3L465.7 440.9L457.6 439.3L458.1 428.2L455.9 423.7L458.3 422.0L457.5 417.4L459.6 413.8L461.0 407.5L459.2 402.5L455.0 400.3L454.2 397.1L455.3 392.5L440.7 392.2L437.8 383.0L440.0 382.9L439.9 379.5L438.4 377.2L438.1 372.6L433.6 370.3L428.9 370.4L425.7 368.1L420.5 366.6L417.6 363.6L409.0 362.3L400.7 355.4L401.4 350.2L400.4 347.2L401.2 341.4L391.3 342.7L387.2 345.6L380.6 348.7L378.9 351.1L375.0 351.3L369.3 350.6L365.0 351.9L361.5 351.0L362.0 339.3L355.8 343.8L349.1 343.6L346.2 339.5L341.1 339.1L342.7 335.7L338.5 331.1L335.3 324.1L337.3 322.7L337.3 319.5L341.9 317.3L341.2 313.1L343.1 310.5L343.7 306.9L352.4 301.7L358.6 300.2L359.7 299.1L366.5 299.4L369.9 278.5L370.1 275.2L368.9 270.8L365.6 268.0L365.6 262.5L369.9 261.3L371.4 262.0L371.7 259.1L367.2 258.3L367.1 253.6L382.0 253.7L384.5 251.1L386.6 253.5L388.1 258.0L389.5 257.1L393.7 261.1L399.6 260.6L401.1 258.3L406.8 256.5L409.9 255.3L410.8 252.0L416.2 249.9L415.8 248.3L409.4 247.6L408.3 242.8L408.6 237.7L405.2 235.7L406.6 235.0L412.3 236.0L418.3 237.9L420.5 236.1L426.0 234.9L434.5 232.0L437.3 229.1L436.3 227.0L440.3 226.6L442.0 228.4L441.1 231.7L443.7 232.9L445.4 236.4L443.3 239.1L442.1 245.6L444.0 249.5L444.6 253.0L449.3 256.6L453.0 257.0L453.9 255.5L456.3 255.1L459.7 253.8L462.2 251.8L466.4 252.4L468.3 252.2L472.4 252.8L473.1 251.2L471.8 249.7L472.6 247.5L475.7 248.2L479.3 247.4L483.6 249.0L486.9 250.6L489.3 248.5L491.0 248.8L492.0 251.0L495.7 250.4L498.6 247.5L501.0 241.9L505.5 234.9L508.1 234.6L509.9 238.8L514.2 252.1L518.3 253.4L518.5 258.7L512.8 264.9L515.1 267.2L528.6 268.4L528.9 276.1L534.7 271.1L544.3 273.8L556.9 278.5L560.6 282.9L559.4 287.1L568.2 284.8L583.1 288.8L594.4 288.5L605.7 294.8L615.4 303.4L621.3 305.6L627.8 305.9L630.6 308.3L633.2 318.1L634.4 322.7L631.4 335.5L627.5 340.5L616.8 351.3L611.9 360.1L606.3 366.8L604.4 367.0L602.3 372.8L602.8 387.5L600.7 399.8L599.9 405.0L597.5 408.2L596.1 419.0L588.4 429.6L587.1 438.0L580.9 441.6L579.1 446.5L570.9 446.5L558.9 449.7L553.5 453.4L545.0 455.8L536.0 462.5L529.6 470.9L528.4 477.2L529.7 481.9L528.3 490.6L526.6 494.9L521.2 499.6L512.8 515.2L506.1 522.2L500.9 526.4L497.4 535.1L492.4 540.3L490.3 535.1L493.6 530.8L489.2 524.7L483.3 519.7L475.4 514.0L472.6 514.3L464.9 507.4L460.0 508.4Z"/><path class="c" data-n="Chile" d="M376.1 740.0L376.1 768.8L384.3 768.8L388.9 769.2L386.4 774.6L379.8 778.7L376.1 778.3L371.6 777.2L366.0 773.2L358.1 771.3L348.5 763.9L340.7 756.9L330.2 742.6L336.5 745.2L347.2 753.7L357.3 758.4L361.2 752.5L363.7 743.7L370.7 738.5L376.1 740.0ZM379.3 434.4L382.3 445.7L387.8 444.6L388.7 446.7L386.1 455.3L377.8 459.4L378.0 473.5L376.4 476.2L378.7 479.6L373.3 484.9L368.3 493.0L365.6 500.9L366.3 509.4L361.6 518.5L365.1 534.1L367.1 535.8L367.1 544.2L362.8 553.2L362.9 561.1L357.2 567.2L357.2 576.0L359.5 585.5L354.9 589.0L352.9 597.8L351.1 608.0L352.4 620.4L349.3 622.5L351.1 634.5L354.6 638.5L352.0 642.9L355.6 645.1L356.4 649.1L353.1 651.1L353.9 657.5L351.1 672.1L347.1 681.7L348.0 687.4L345.5 694.7L339.7 699.9L340.4 712.4L343.0 716.7L348.1 716.0L348.0 725.0L351.1 732.2L369.5 733.9L376.6 735.8L369.8 735.7L366.2 738.8L359.3 743.3L358.0 755.3L354.8 755.6L346.2 751.4L337.5 742.5L328.0 735.4L325.6 727.5L327.8 720.4L324.0 712.4L323.0 692.4L326.2 681.4L334.3 672.7L322.7 669.4L330.0 659.7L332.6 641.8L341.0 645.6L345.0 623.8L339.9 621.1L337.5 634.1L332.7 632.6L335.1 617.8L337.7 599.1L341.2 592.4L339.0 582.8L338.4 572.0L341.6 571.7L346.3 556.4L351.5 541.6L354.8 528.0L353.0 514.6L355.3 507.3L354.4 496.5L358.8 485.9L360.2 469.4L362.6 452.0L365.0 433.6L364.5 420.2L362.9 408.9L366.8 406.8L368.8 402.7L372.6 408.2L373.6 414.0L377.6 417.4L375.2 425.2L379.3 434.4Z"/><path class="c co" data-n="Colombia" d="M324.8 267.8L321.5 266.0L317.8 263.5L315.6 264.7L309.1 263.6L307.3 260.3L305.9 260.5L298.2 256.1L297.2 253.7L300.1 253.2L299.7 249.3L301.5 246.6L305.3 246.1L308.5 241.3L311.4 237.3L308.6 235.5L310.0 231.0L308.3 224.0L310.0 222.0L308.7 215.5L305.7 211.4L306.6 207.7L309.1 208.3L310.5 206.0L308.8 201.4L309.7 200.3L313.6 200.6L319.3 195.2L322.5 194.3L322.6 191.8L324.0 185.2L328.3 181.6L333.1 181.5L333.7 179.9L339.7 180.5L345.7 176.6L348.7 174.9L352.3 171.1L355.0 171.6L357.0 173.6L355.6 176.3L350.7 177.6L348.7 181.5L345.8 183.7L343.6 186.6L342.6 192.1L340.5 196.6L344.5 197.1L345.4 200.7L347.1 202.4L347.7 205.5L346.8 208.3L347.1 209.9L349.0 210.5L350.8 213.2L360.6 212.5L365.0 213.5L370.4 220.1L373.4 219.2L378.9 219.7L383.3 218.8L386.0 220.1L384.6 224.2L382.9 226.8L382.3 232.3L383.8 237.4L386.0 239.6L386.3 241.3L382.4 245.1L385.2 246.8L387.2 249.5L389.5 257.1L388.1 258.0L386.6 253.5L384.5 251.1L382.0 253.7L367.1 253.6L367.2 258.3L371.7 259.1L371.4 262.0L369.9 261.3L365.6 262.5L365.6 268.0L368.9 270.8L370.1 275.2L369.9 278.5L366.5 299.4L362.7 295.4L360.4 295.2L365.4 287.4L359.5 283.8L354.9 284.5L352.2 283.2L348.0 285.2L342.3 284.2L337.8 276.2L334.3 274.3L331.9 270.7L326.8 267.1L324.8 267.8Z"/><path class="c" data-n="Costa Rica" d="M266.9 203.7L262.8 202.0L261.2 200.4L262.1 199.1L261.8 197.4L259.7 195.5L256.7 194.0L254.1 193.0L253.6 190.8L251.6 189.4L252.1 191.6L250.6 193.5L248.8 191.3L246.4 190.6L245.4 189.0L245.4 186.6L246.4 184.2L244.3 183.1L246.0 181.6L247.1 180.6L252.2 182.7L253.9 181.7L256.3 182.3L257.6 183.9L259.8 184.4L261.7 182.8L263.6 187.0L266.5 190.1L270.1 193.4L267.2 194.1L267.2 197.2L268.8 198.3L267.7 199.3L268.0 200.7L267.3 202.2L266.9 203.7Z"/><path class="c" data-n="Cuba" d="M272.2 84.9L278.8 85.5L284.8 85.6L292.0 88.4L295.0 91.4L302.1 90.5L304.8 92.4L311.3 97.5L316.0 101.2L318.5 101.1L323.1 102.8L322.5 105.1L328.1 105.4L333.9 108.7L333.0 110.6L327.9 111.7L322.8 112.1L317.5 111.4L306.6 112.2L311.7 107.7L308.6 105.6L303.7 105.0L301.1 102.7L299.3 98.0L295.0 98.3L287.9 96.1L285.6 94.4L275.6 93.1L273.0 91.5L275.8 89.5L268.4 89.0L262.9 93.3L259.7 93.4L258.7 95.5L254.9 96.4L251.6 95.6L255.6 93.0L257.3 90.1L260.7 88.2L264.6 86.6L270.4 85.8L272.2 84.9Z"/><path class="c" data-n="Rep. Dominicana" d="M352.7 113.4L353.6 112.0L359.6 112.0L364.1 114.1L366.1 113.9L367.5 116.8L371.6 116.6L371.4 119.0L374.8 119.3L378.5 122.2L375.7 125.5L372.1 123.8L368.6 124.1L366.1 123.7L364.7 125.2L361.8 125.7L360.6 123.7L358.1 124.9L355.0 130.4L353.1 129.1L352.7 126.8L352.9 124.6L350.9 122.2L352.8 120.9L353.3 117.8L352.7 113.4Z"/><path class="c" data-n="Ecuador" d="M287.2 292.6L291.3 286.9L289.6 283.6L286.7 287.1L282.2 283.8L283.7 281.6L282.4 274.7L285.1 273.5L286.5 268.8L289.4 263.9L288.8 260.8L293.0 259.1L298.2 256.1L305.9 260.5L307.3 260.3L309.1 263.6L315.6 264.7L317.8 263.5L321.5 266.0L324.8 267.8L325.8 273.6L323.5 278.5L315.2 286.5L306.0 289.5L301.3 296.2L299.9 301.3L295.6 304.5L292.4 300.6L289.3 299.8L286.2 300.4L285.9 297.6L288.1 295.8L287.2 292.6Z"/><path class="c" data-n="Guatemala" d="M212.6 161.0L208.7 159.6L203.9 159.4L200.5 157.9L196.4 154.6L196.5 152.3L197.4 150.5L196.3 149.0L200.0 142.6L209.8 142.5L210.0 139.8L208.8 139.4L207.9 137.6L205.1 135.8L202.3 133.1L205.7 133.1L205.7 128.6L212.8 128.6L219.9 128.7L219.8 135.0L219.2 144.0L221.5 144.0L224.0 145.4L224.6 144.2L226.9 145.3L223.4 148.3L219.8 150.5L219.2 152.0L219.8 153.5L218.3 155.5L216.5 156.0L216.9 157.0L215.5 157.8L212.8 159.8L212.6 161.0Z"/><path class="c" data-n="Guyana" d="M443.7 202.6L448.7 205.5L453.5 210.5L453.7 214.4L456.5 214.6L460.6 218.4L463.6 221.0L462.4 227.9L457.8 229.9L458.2 231.7L456.8 235.7L460.2 241.2L462.6 241.2L463.6 245.5L468.3 252.2L466.4 252.4L462.2 251.8L459.7 253.8L456.3 255.1L453.9 255.5L453.0 257.0L449.3 256.6L444.6 253.0L444.0 249.5L442.1 245.6L443.3 239.1L445.4 236.4L443.7 232.9L441.1 231.7L442.0 228.4L440.3 226.6L436.3 227.0L431.2 221.1L433.2 219.0L433.1 215.5L437.8 214.3L439.7 212.8L437.0 210.0L437.7 207.2L443.7 202.6Z"/><path class="c" data-n="Honduras" d="M233.8 166.8L232.5 164.4L230.1 163.7L230.7 160.6L229.6 159.7L228.1 159.2L224.7 160.1L224.4 159.0L222.1 157.8L220.5 156.2L218.3 155.5L219.8 153.5L219.2 152.0L219.8 150.5L223.4 148.3L226.9 145.3L227.6 145.6L229.3 144.2L231.5 144.1L232.2 144.7L233.4 144.3L236.9 145.0L240.4 144.8L242.9 143.9L243.8 143.1L246.2 143.5L248.0 144.0L250.0 143.8L251.6 143.1L255.0 144.2L256.2 144.4L258.6 145.9L260.8 147.7L263.5 148.9L265.5 151.0L262.9 150.9L261.9 152.0L259.2 153.0L257.3 153.0L255.6 154.0L254.1 153.6L252.8 152.4L252.0 152.7L251.0 154.5L250.2 156.1L247.5 158.3L246.1 159.2L245.3 160.2L243.1 158.6L241.4 160.7L239.8 160.6L238.1 160.8L238.2 164.7L237.1 164.7L236.1 166.5L233.8 166.8Z"/><path class="c" data-n="Haití" d="M341.4 111.7L346.1 112.1L352.7 113.4L353.3 117.8L352.8 120.9L350.9 122.2L352.9 124.6L352.7 126.8L347.6 125.4L344.0 126.0L339.4 125.4L335.8 126.9L331.7 124.4L332.4 121.8L339.4 122.9L345.2 123.6L347.9 121.8L344.4 118.3L344.5 115.2L339.7 114.0L341.4 111.7Z"/><path class="c" data-n="Jamaica" d="M308.0 123.2L313.2 123.9L317.2 125.9L318.5 128.1L313.1 128.2L310.8 129.6L306.5 128.3L302.2 125.4L303.1 123.5L306.3 123.0L308.0 123.2Z"/><path class="c" data-n="México" d="M158.9 62.4L156.0 69.9L154.6 75.9L154.1 87.0L153.4 91.1L154.7 95.6L157.0 99.5L158.6 105.9L163.6 111.9L165.4 116.5L168.4 120.5L176.5 122.6L179.6 126.0L186.3 123.8L192.1 123.0L197.8 121.5L202.6 120.1L207.5 116.8L209.3 112.1L209.9 105.3L211.2 102.9L216.4 100.8L224.4 98.9L231.2 99.2L235.8 98.5L237.6 100.2L237.4 104.1L233.3 109.0L231.5 113.9L232.9 115.3L231.7 118.8L229.8 125.1L227.9 123.0L226.3 123.2L224.8 123.3L222.1 128.1L220.7 127.2L219.8 127.5L219.9 128.7L212.8 128.6L205.7 128.6L205.7 133.1L202.3 133.1L205.1 135.8L207.9 137.6L208.8 139.4L210.0 139.8L209.8 142.5L200.0 142.6L196.3 149.0L197.4 150.5L196.5 152.3L196.4 154.6L187.7 146.1L183.8 143.6L177.6 141.5L173.3 142.1L167.2 145.1L163.4 145.8L158.0 143.8L152.3 142.2L145.2 138.6L139.4 137.5L130.8 133.8L124.4 130.0L122.5 127.8L118.3 127.4L110.5 124.8L107.3 121.2L99.1 116.6L95.3 111.5L93.5 107.5L96.0 106.7L95.2 104.4L97.0 102.3L97.0 99.5L94.5 95.8L93.8 92.5L91.2 88.3L84.5 80.1L76.8 73.6L73.1 68.3L66.6 64.9L65.2 62.8L66.3 57.6L62.5 55.6L58.0 51.4L56.1 45.4L52.0 44.7L47.5 40.2L44.0 36.0L43.6 33.2L39.5 26.6L36.8 19.9L37.0 16.5L31.5 12.9L28.9 13.3L24.6 10.8L23.3 14.5L24.6 18.7L25.3 25.4L28.0 29.0L33.6 35.0L34.9 37.1L36.0 37.7L37.0 40.7L38.4 40.6L39.9 46.1L42.2 48.3L43.8 51.4L48.6 55.7L51.2 63.6L53.4 67.3L55.5 71.3L56.0 75.7L59.6 75.9L62.7 79.7L65.5 83.4L65.3 84.9L62.1 88.0L60.7 87.9L58.7 82.9L53.7 78.2L48.2 74.1L44.3 72.0L44.6 65.8L43.4 61.2L39.8 58.6L34.6 54.8L33.5 55.9L31.6 53.7L26.9 51.6L22.4 46.6L23.0 46.0L26.1 46.5L29.0 43.2L29.2 39.3L23.4 33.1L18.9 30.7L16.1 25.2L13.3 19.4L9.7 12.3L6.6 4.2L15.3 3.5L25.0 2.5L24.3 4.3L35.8 8.7L53.2 15.0L68.3 14.9L74.3 14.9L74.4 11.2L87.6 11.2L90.3 14.4L94.2 17.2L98.8 21.1L101.3 25.7L103.2 30.6L107.1 33.2L113.4 35.8L118.2 28.9L124.5 28.8L129.8 32.2L133.7 38.2L136.3 43.3L140.8 48.2L142.5 54.2L144.6 58.2L150.6 60.8L156.0 62.7L158.9 62.4Z"/><path class="c" data-n="Nicaragua" d="M246.0 181.6L243.4 179.2L239.8 176.0L238.1 173.4L234.9 170.9L231.1 167.4L231.9 166.2L233.2 167.4L236.1 166.5L237.1 164.7L238.2 164.7L238.1 160.8L239.8 160.6L241.4 160.7L243.1 158.6L245.3 160.2L246.1 159.2L247.5 158.3L250.2 156.1L250.3 154.5L252.0 152.7L252.8 152.4L254.1 153.6L255.6 154.0L257.3 153.0L259.2 153.0L261.9 152.0L262.9 150.9L265.5 151.0L264.9 151.8L264.5 153.6L265.3 156.4L263.5 159.1L262.7 162.3L262.5 165.7L262.9 167.7L263.1 171.3L261.9 172.0L261.2 175.4L261.7 177.4L260.1 179.4L260.5 181.5L261.7 182.8L259.8 184.4L257.6 183.9L256.3 182.3L253.9 181.7L252.2 182.7L247.1 180.6L246.0 181.6Z"/><path class="c" data-n="Panamá" d="M305.7 211.4L303.1 209.2L301.5 205.1L303.4 203.0L301.4 202.5L300.0 199.9L296.2 197.8L292.9 198.3L291.3 201.0L288.3 202.9L286.6 203.2L285.9 204.8L289.5 209.0L287.4 209.9L286.3 211.1L282.8 211.5L281.5 206.9L280.5 208.2L277.9 207.7L276.4 204.6L273.3 204.1L271.3 203.2L268.0 203.2L267.8 204.9L266.9 203.7L267.3 202.2L268.0 200.7L267.7 199.3L268.8 198.3L267.2 197.2L267.2 194.1L270.1 193.4L272.9 196.2L272.7 197.8L275.7 198.2L276.5 197.5L278.6 199.4L282.3 198.9L285.5 196.9L290.2 195.4L292.8 193.0L297.0 193.5L296.7 194.3L300.9 194.5L304.3 195.9L306.8 198.2L309.7 200.3L308.8 201.4L310.5 206.0L309.1 208.3L306.6 207.7L305.7 211.4Z"/><path class="c" data-n="Perú" d="M368.8 402.7L366.8 406.8L362.9 408.9L355.2 404.3L354.6 401.0L339.5 393.0L325.8 384.4L319.9 379.5L316.8 373.0L318.0 370.7L311.6 360.5L304.1 346.1L296.9 330.8L293.7 327.3L291.3 321.6L285.4 316.6L280.0 313.5L282.5 310.1L278.8 302.8L281.1 297.4L287.2 292.6L288.1 295.8L285.9 297.6L286.2 300.4L289.3 299.8L292.4 300.6L295.6 304.5L299.9 301.3L301.3 296.2L306.0 289.5L315.2 286.5L323.5 278.5L325.8 273.6L324.8 267.8L326.8 267.1L331.9 270.7L334.3 274.3L337.8 276.2L342.3 284.2L348.0 285.2L352.2 283.2L354.9 284.5L359.5 283.8L365.4 287.4L360.4 295.2L362.7 295.4L366.5 299.4L359.7 299.1L358.6 300.2L352.4 301.7L343.7 306.9L343.1 310.5L341.2 313.1L341.9 317.3L337.3 319.5L337.3 322.7L335.3 324.1L338.5 331.1L342.7 335.7L341.1 339.1L346.2 339.5L349.1 343.6L355.8 343.8L362.0 339.3L361.5 351.0L365.0 351.9L369.3 350.6L375.9 363.1L374.2 365.8L373.9 371.3L373.7 378.0L370.7 381.9L372.1 384.8L370.4 387.5L373.6 394.1L368.8 402.7Z"/><path class="c" data-n="Puerto Rico" d="M394.0 123.0L397.9 123.7L399.3 125.3L397.4 127.4L391.6 127.3L387.2 127.6L386.7 124.2L387.8 123.0L394.0 123.0Z"/><path class="c" data-n="Paraguay" d="M421.4 440.6L424.4 430.8L424.6 426.4L428.3 419.3L441.6 416.9L448.6 417.0L455.7 421.2L455.9 423.7L458.1 428.2L457.6 439.3L465.7 440.9L468.8 439.3L473.9 441.5L475.3 443.9L476.1 451.5L476.9 454.7L479.8 455.1L482.6 453.8L485.4 455.3L485.4 459.9L484.4 464.8L482.9 469.7L481.6 477.2L474.7 483.8L468.7 485.1L460.1 483.8L452.4 481.5L459.9 468.6L458.8 464.8L451.0 461.6L441.7 455.4L435.5 454.1L421.4 440.6Z"/><path class="c" data-n="El Salvador" d="M230.1 163.7L229.3 165.5L224.9 165.4L222.1 164.7L219.0 163.1L214.8 162.6L212.6 161.0L212.8 159.8L215.5 157.8L216.9 157.0L216.5 156.0L218.3 155.5L220.5 156.2L222.1 157.8L224.4 159.0L224.7 160.1L228.1 159.2L229.6 159.7L230.7 160.6L230.1 163.7Z"/><path class="c" data-n="Surinam" d="M463.6 221.0L472.8 222.6L473.6 221.2L479.7 220.6L487.9 222.7L484.0 229.3L484.6 234.5L487.6 239.0L486.2 242.3L485.6 245.8L483.6 249.0L479.3 247.4L475.7 248.2L472.6 247.5L471.8 249.7L473.1 251.2L472.4 252.8L468.3 252.2L463.6 245.5L462.6 241.2L460.2 241.2L456.8 235.7L458.2 231.7L457.8 229.9L462.4 227.9L463.6 221.0Z"/><path class="c" data-n="Uruguay" d="M460.0 508.4L464.9 507.4L472.6 514.3L475.4 514.0L483.3 519.7L489.2 524.7L493.6 530.8L490.3 535.1L492.4 540.3L489.1 546.1L480.5 551.2L474.9 549.3L470.7 550.3L463.7 546.4L458.5 546.7L453.9 541.6L454.5 535.7L456.1 533.6L456.1 524.6L458.1 515.4L460.0 508.4Z"/><path class="c" data-n="Venezuela" d="M355.6 176.3L355.4 178.1L350.9 179.0L353.4 182.5L353.3 186.6L349.9 191.1L352.8 197.2L356.1 196.7L357.8 191.1L355.4 188.4L355.0 182.5L364.5 179.4L363.5 175.7L366.1 173.3L368.9 178.7L374.2 178.8L379.2 183.2L379.5 185.7L386.3 185.8L394.5 185.0L398.8 188.5L404.6 189.4L408.9 187.0L409.0 185.1L418.4 184.6L427.6 184.5L421.1 186.8L423.7 190.4L429.8 191.0L435.6 194.8L436.8 201.0L440.8 200.8L443.7 202.6L437.7 207.2L437.0 210.0L439.7 212.8L437.8 214.3L433.1 215.5L433.2 219.0L431.2 221.1L436.3 227.0L437.3 229.1L434.5 232.0L426.0 234.9L420.5 236.1L418.3 237.9L412.3 236.0L406.6 235.0L405.2 235.7L408.6 237.7L408.3 242.8L409.4 247.6L415.8 248.3L416.2 249.9L410.8 252.0L409.9 255.3L406.8 256.5L401.1 258.3L399.6 260.6L393.7 261.1L389.5 257.1L387.2 249.5L385.2 246.8L382.4 245.1L386.3 241.3L386.0 239.6L383.8 237.4L382.3 232.3L382.9 226.8L384.6 224.2L386.0 220.1L383.3 218.8L378.9 219.7L373.4 219.2L370.4 220.1L365.0 213.5L360.6 212.5L350.8 213.2L349.0 210.5L347.1 209.9L346.8 208.3L347.7 205.5L347.1 202.4L345.4 200.7L344.5 197.1L340.5 196.6L342.6 192.1L343.6 186.6L345.8 183.7L348.7 181.5L350.7 177.6L355.6 176.3Z"/>
+      <path class="arc" d="M334.7 230.7 Q239.2 125.0 143.8 115.7"/><circle class="cd" cx="143.8" cy="115.7" r="2.6"/><path class="arc" d="M334.7 230.7 Q323.4 275.4 312.1 359.1"/><circle class="cd" cx="312.1" cy="359.1" r="2.6"/><path class="arc" d="M334.7 230.7 Q347.7 342.6 360.6 537.4"/><circle class="cd" cx="360.6" cy="537.4" r="2.6"/><path class="arc" d="M334.7 230.7 Q394.5 329.7 454.2 547.9"/><circle class="cd" cx="454.2" cy="547.9" r="2.6"/><path class="arc" d="M334.7 230.7 Q434.3 254.8 533.9 388.4"/><circle class="cd" cx="533.9" cy="388.4" r="2.6"/><path class="arc" d="M334.7 230.7 Q317.9 238.8 301.2 268.0"/><circle class="cd" cx="301.2" cy="268.0" r="2.6"/><path class="arc" d="M334.7 230.7 Q313.9 202.9 293.2 197.9"/><circle class="cd" cx="293.2" cy="197.9" r="2.6"/>
+      <circle class="pulse" cx="334.7" cy="230.7" r="9"/>
+      <circle cx="334.7" cy="230.7" r="4.5" fill="#fff"/>
+      <text class="lbl" x="346.7" y="220.7">Colombia</text>
+    </svg>
+        <div class="map-tip" id="mapTip"></div>
+        <div class="map-legend">
+          <span><i class="on"></i>Base en Colombia</span>
+          <span><i class="region"></i>Países donde atendemos en remoto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
        STATS
   ============================================= -->
   <section id="stats" aria-label="Impacto de nuestras soluciones">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item fade-up">
-          <div class="stat-number" data-target="80">0<span>%</span></div>
-          <div class="stat-label">de reducción en tareas<br/>manuales repetitivas</div>
+          <div class="stat-number" data-target="4">0<span></span></div>
+          <div class="stat-label">etapas en nuestro método:<br/>diagnosticar a adoptar</div>
         </div>
         <div class="stat-item fade-up delay-1">
-          <div class="stat-number" data-target="24">0<span>/7</span></div>
-          <div class="stat-label">operación continua<br/>sin intervención humana</div>
+          <div class="stat-number" data-target="3">0<span></span></div>
+          <div class="stat-label">frentes de servicio:<br/>estrategia, construcción y costos</div>
         </div>
         <div class="stat-item fade-up delay-2">
-          <div class="stat-number" data-target="3">0<span>x</span></div>
-          <div class="stat-label">más conversaciones<br/>atendidas por hora</div>
+          <div class="stat-number" data-target="100">0<span>%</span></div>
+          <div class="stat-label">remoto, atendemos<br/>Colombia y Latam</div>
         </div>
         <div class="stat-item fade-up delay-3">
-          <div class="stat-number" data-target="2">0<span> sem</span></div>
-          <div class="stat-label">tiempo promedio de<br/>implementación</div>
+          <div class="stat-number" data-target="1">0<span></span></div>
+          <div class="stat-label">equipo, de la estrategia<br/>a la implementación</div>
         </div>
       </div>
     </div>
@@ -1625,7 +1762,7 @@
       <div class="section-header fade-up" style="margin-bottom:48px;">
         <span class="tag">📩 Contáctanos</span>
         <h2 id="contacto-title">Hablemos de tu proyecto</h2>
-        <p>Cuéntanos qué necesitas. El diagnóstico inicial es completamente <strong style="color:var(--white);">gratuito</strong>.</p>
+        <p>Cuéntanos dónde la IA todavía no te está ayudando. El diagnóstico inicial es completamente <strong style="color:var(--white);">gratuito</strong>.</p>
       </div>
 
       <div class="contact-wrapper fade-up">
@@ -1635,8 +1772,8 @@
           <span class="tag">💬 Asesoría remota</span>
           <h2>Transforma tu negocio<br/>desde hoy</h2>
           <p>
-            Agenda una llamada y nuestro equipo te mostrará exactamente
-            cómo la IA puede ahorrarle tiempo y dinero a tu empresa —
+            Agenda una llamada y nuestro equipo te mostrará dónde y cómo la IA
+            puede generar impacto en tu organización —
             sin tecnicismos, sin compromisos.
           </p>
           <div class="contact-details">
@@ -1688,15 +1825,16 @@
                 <label for="servicio">¿Qué te interesa?</label>
                 <select id="servicio" name="servicio">
                   <option value="" disabled selected>Selecciona un servicio</option>
-                  <option value="automatizacion">🤖 Automatización con IA</option>
-                  <option value="web">🌐 Diseño web</option>
-                  <option value="ambos">✨ Ambos servicios</option>
+                  <option value="diagnostico">🧭 Diagnóstico de madurez en IA</option>
+                  <option value="soluciones">🛠️ Construcción de soluciones (web, integraciones, multiagente)</option>
+                  <option value="costos">📉 Optimización de costos de IA</option>
+                  <option value="fisica">📡 IA en el mundo físico</option>
                   <option value="otro">💬 No estoy seguro / Quiero asesoría</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="mensaje">¿Cómo podemos ayudarte?</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu negocio y qué proceso te gustaría automatizar o qué necesitas en tu web..."></textarea>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu organización y qué problema te gustaría resolver con IA..."></textarea>
               </div>
               <button type="submit" class="btn-form">
                 Enviar mensaje 🚀
@@ -1738,8 +1876,8 @@
 
   <!-- Mobile CTA Bar -->
   <div class="mobile-cta-bar" aria-label="Acciones rápidas">
-    <a href="#contacto" class="btn-primary">🚀 Quiero automatizar mi negocio</a>
-    <a href="https://wa.me/573209286950?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20automatizaci%C3%B3n%20con%20IA."
+    <a href="#contacto" class="btn-primary">🚀 Medir mi madurez en IA</a>
+    <a href="https://wa.me/573209286950?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20IA."
        class="btn-wa"
        target="_blank"
        rel="noopener noreferrer"
@@ -1751,7 +1889,7 @@
   </div>
 
   <!-- WhatsApp FAB -->
-  <a href="https://wa.me/573209286950?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20automatizaci%C3%B3n%20con%20IA."
+  <a href="https://wa.me/573209286950?text=Hola,%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20IA."
      class="wa-fab"
      target="_blank"
      rel="noopener noreferrer"
@@ -1878,6 +2016,22 @@
         this.style.borderColor = '';
       });
     });
+
+    // ── Map tooltip ───────────────────────────────
+    const mapTip  = document.getElementById('mapTip');
+    const mapCard = document.getElementById('mapCard');
+    if (mapTip && mapCard) {
+      document.querySelectorAll('.map-svg .c').forEach(p => {
+        p.addEventListener('mousemove', (e) => {
+          const r = mapCard.getBoundingClientRect();
+          mapTip.textContent = p.getAttribute('data-n');
+          mapTip.style.opacity = 1;
+          mapTip.style.left = (e.clientX - r.left + 14) + 'px';
+          mapTip.style.top  = (e.clientY - r.top + 14) + 'px';
+        });
+        p.addEventListener('mouseleave', () => { mapTip.style.opacity = 0; });
+      });
+    }
 
     // ── Smooth scroll polyfill guard ─────────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
